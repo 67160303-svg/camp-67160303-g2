@@ -38,6 +38,9 @@
                         <input type="text" id="lname" class="form-control">
                     </div>
                 </div>
+                <div>
+                    วัน/เดือน/ปี
+                </div>
             </form>
         </div>
         </div>
