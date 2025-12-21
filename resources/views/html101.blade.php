@@ -13,15 +13,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Itim&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
         body {
+            font-family: "Itim", cursive;
+            font-size: 20px;
             background: linear-gradient(to bottom, #d9f0ff, #bfe5ff);
         }
+
 
         .form-card {
             max-width: 900px;
             margin: auto;
-            padding: 30px;
-            border-radius: 20px;
+            padding: 80px;
+            border-radius: 30px;
             background: #fff;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
@@ -29,8 +33,9 @@
         h1 {
             font-weight: bold;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
+
     </style>
 
 </head>
@@ -42,7 +47,8 @@
 
             <h1>Workshop #HTML - FORM</h1>
 
-            <form id="myForm" novalidate>
+            <form id="myForm" action="/workshop-form" method="POST" novalidate>
+                @csrf
 
                 <!-- Row 1 -->
                 <div class="row">
@@ -149,7 +155,9 @@
                 <!-- Buttons -->
                 <div class="text-center">
                     <button class="btn btn-secondary px-4" type="reset">reset</button>
-                    <button class="btn btn-primary px-4 ms-2" type="button" onclick="validateForm()">บันทึก</button>
+                    <button class="btn btn-primary px-4 ms-2" type="submit" onclick="validateForm()">
+                        บันทึก
+                    </button>
                 </div>
 
             </form>
